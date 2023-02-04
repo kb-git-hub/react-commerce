@@ -7,8 +7,18 @@
   
     .logo-container {
       height: 100%;
+      width: 200px;
+      padding: 2px;
+      display: flex;
+      justify-content: start;
+    }
+    
+    .logo2{
+      background-image: url('../../assets/commerce_logo.png');
+      background-size: contain;
+      background-position: center;
       width: 70px;
-      padding: 25px;
+      height: 70px;
     }
   
     .nav-links-container {
