@@ -1,11 +1,21 @@
-import Categories from "./components/categories/categories.component"
-import {categoriesList} from './data/category-list'
+import Home from "./routes/home/home.component"
+import { Routes, Route } from "react-router-dom"
+import Navigation from "./routes/navigation/navigation.component"
+
+
+
+const Shop = ()=>{
+  return <h1> I am the Shop Page</h1>
+}
 
 const App = () => {
   return (
-    <div className="App">
-      <Categories categoriesList={categoriesList}/>
-    </div>
+    <Routes>
+      <Route path="/" element={<Navigation/>}>
+        <Route index element={<Home/>}/>
+        <Route path="shop" element={<Shop/>}/>
+      </Route>
+    </Routes>
   )
 }
 
