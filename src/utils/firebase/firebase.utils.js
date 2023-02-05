@@ -5,7 +5,10 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from "firebase/auth"
+
+import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,8 +19,6 @@ const firebaseConfig = {
   messagingSenderId: "557435069965",
   appId: "1:557435069965:web:58313861178c5c400dd744",
 }
-
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore"
 
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig)
@@ -63,4 +64,10 @@ export const createAuthUserWithEmailAndPassword = async (email, password) => {
   if (!email || !password) return
 
   return await createUserWithEmailAndPassword(auth, email, password)
+}
+
+export const signInAuthUserWithEmailAndPassword = async (email, password) => {
+  if (!email || !password) return
+
+  return await signInWithEmailAndPassword(auth, email, password)
 }
