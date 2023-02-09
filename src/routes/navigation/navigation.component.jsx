@@ -29,7 +29,6 @@ const Navigation = () =>{
                   (<Link className="nav-link" to={'/auth'}>SIGN IN</Link>)
                 }
                 <CartIcon/>
-                <Link className="nav-link" to={'/checkout'}>//CHECKOUT//</Link>
             </div>
             {isCartOpen && <CartDropdown/>}
         </div>
