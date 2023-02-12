@@ -9,14 +9,13 @@ const CategoriesPreview = () => {
     const categoryArray = Object.entries(categoriesMap)
     
   return (
-    <div className="category-preview-container">
-
+    <Fragment>
       {categoryArray.map(category=>
         (
           <CategoryPreview key={category[0]} title={category[0]} products={category[1]}/>
         )
       )}
-    </div>
+    </Fragment>
   )
 }
 
