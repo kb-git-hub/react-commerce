@@ -34,7 +34,6 @@ const Navigation = () =>{
         </div>
             <Outlet/>
       </Fragment>
-  
     )
   }
   

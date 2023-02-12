@@ -1,11 +1,11 @@
-import Categories from "../../components/categories/categories.component"
 import { categoriesList } from "../../data/category-list"
 import { Outlet } from "react-router-dom"
+import Directory from "../../components/directory/directory.component"
 
 const Home = () => {
   return (
     <div>
-        <Categories categoriesList={categoriesList}/>
+        <Directory categories={categoriesList}/>
         <Outlet/>
     </div>
   )
