@@ -12,7 +12,6 @@ const CategoryPreview = ({title, products}) => {
 
     const listRandomProductsIdx = productLength =>{
         const randomProducts = new Set()
-        
         while (randomProducts.size < 4){
             randomProducts.add(Math.floor(Math.random() * productLength))
         }
